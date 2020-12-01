@@ -1,7 +1,22 @@
+/**
+ * @file main.c
+ * @version 1.3
+ * @date 26/11/2020
+ * @author J.Marcos
+ * @brief Solita los datos del Método Simplex para maximizar
+ */
+
 #include "metodosimplex.h"
+#include "gnuplot_i.h"
 #include <stdio.h>
+
+/**
+ * @brief Fichero principal
+ * @return 0
+ */
 int main(){
 	float funcion[LIM],restriccion[LIM][LIM],constante[LIM];
+	float restriccion2[LIM][LIM],constante2[LIM];
 	float rcons[LIM],nfp[LIM][LIM],nfp2[LIM],z2;
 	int i,n,v,r;
 	float menor,menor2;
@@ -23,9 +38,11 @@ int main(){
 		for(n=0; n<v; n++){
 			printf("n%d: ",n+1);
 			scanf("%f",&restriccion[i][n]);
+			restriccion2[i][n]=restriccion[i][n];
 		}
 		printf("Constante: ");
 		scanf("%f", &constante[i]);
+		constante2[i]=constante[i];;
 	}
 	printf("-----------------------------------------------------------\n");
 	imprimir_tabla_simplex_uno(funcion,restriccion,constante,v,r);
@@ -33,6 +50,7 @@ int main(){
 	buscar_menor( funcion, v);
 	menor = buscar_menor( funcion, v);
 	printf("\n%f",menor);
+	buscar_posicion(funcion,v);
 	aux = buscar_posicion(funcion,v);
 	printf("\n%d",aux);
 	do{
@@ -53,5 +71,6 @@ int main(){
 	printf("-----------------------------------------------------------\n");
 	imprimir_tabla_simplex_dos(funcion,restriccion,constante,v,r,z2);
 	printf("-----------------------------------------------------------\n");
+	graficaMaximizar(restriccion2,constante2,r,v);
 	return 0;
 }

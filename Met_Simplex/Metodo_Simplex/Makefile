@@ -1,9 +1,14 @@
-all:
-	gcc -g -c -Wall main.c -o main.o
-	gcc -g -c -Wall MetodoSimplex.c -o MetodoSimplex.o
-	gcc -g -Wall main.o MetodoSimplex.o -o Simplex
+programa: main.o MetodoSimplex.o gnuplot_i.o
+	gcc -o programa main.o MetodoSimplex.o gnuplot_i.o
+
+main.o: main.c metodosimplex.h gnuplot_i.h
+	gcc -c main.c
+
+MetodoSimplex.o: MetodoSimplex.c metodosimplex.h gnuplot_i.h
+	gcc -c MetodoSimplex.c
+
+gnuplot_i.o: gnuplot_i.c metodosimplex.h gnuplot_i.h
+	gcc -c gnuplot_i.c
+
 clean:
 	del *.o
-	
-remove:
-	del Simplex.exe

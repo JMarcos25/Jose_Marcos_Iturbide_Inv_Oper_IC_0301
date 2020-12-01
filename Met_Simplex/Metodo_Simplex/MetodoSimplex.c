@@ -1,4 +1,15 @@
+/**
+ * @file MetodoSimplex.c
+ * @version 1.3
+ * @date 26/11/2020
+ * @author J.Marcos
+ * @union metodosimplex.h
+ * @brief Funciones
+ */
+
 #include "metodosimplex.h"
+#include "gnuplot_i.h"
+
 void imprimir_tabla_simplex_uno(float num[LIM],float num_dos[LIM][LIM],float num_tres[LIM],int v,int r){
 	int i,n;
 	printf("\t\t\tTabla simplex #1\n");
@@ -139,4 +150,35 @@ int obtener_resultado_z(float z2,float num[LIM],float menor,int aux2){
 	res=menor*num[aux2];
 	z2=z2-res;
 	return z2;
+}
+
+/**
+ * Gráfica el método del la tabla con Gnuplot.
+ */
+void graficaMaximizar(float num[LIM][LIM], float num2[LIM], int r, int v){
+	gnuplot_ctrl    *   h1;
+	int i,j;
+	float x;
+	float y=1;
+
+	printf("Grafica\n");
+	h1 = gnuplot_init() ;
+    gnuplot_cmd(h1, "set grid nopolar");
+	gnuplot_cmd(h1, "set xrange [0:150]");
+	gnuplot_cmd(h1, "set yrange [0:150]");
+	gnuplot_cmd(h1, "set xzeroaxis lt -1") ;
+	gnuplot_cmd(h1, "set yzeroaxis lt -1") ;
+	gnuplot_setstyle(h1, "lines") ;
+	for(i=0; i<r; i++){
+		for(j=0; j<v; j++){
+			x = num2[i]/num[i][j];
+			printf("%.2f = %.2f / %.2f\n",x,num2[i],num[i][j]);
+			y = x/y;
+		}
+		printf("%.2f\n",y);
+		gnuplot_plot_slope(h1, -y, x, "y = x") ;
+		y=1;
+	}
+	sleep(60);
+	gnuplot_close(h1) ;
 }
