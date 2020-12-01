@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Método Simplex: Fichero Fuente C:/Users/jmarc/Desktop/Visual/Metodo_Simplex/metodosimplex.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Método Simplex
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Realiza el método simplexl e imprime una gráfica con Gnuplot</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e04ae2849dfa520b4ee2c9f7e9ff15de.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_3d36f9fe2672789667ca9134e035ff83.html">Visual</a></li><li class="navelem"><a class="el" href="dir_899b2597635506a905bb140d96b3187b.html">Metodo_Simplex</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">metodosimplex.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="metodosimplex_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef __METODOSIMPLEX_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define __METODOSIMPLEX_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="metodosimplex_8h.html#a392fb874e547e582e9c66a08a1f23326">   15</a></span>&#160;<span class="preprocessor">#define MAX 10</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">   16</a></span>&#160;<span class="preprocessor">#define LIM 5</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">void</span> <a class="code" href="metodosimplex_8h.html#a77290111e2efaa6bb260b0867aac479c">imprimir_tabla_simplex_uno</a>(<span class="keywordtype">float</span> num[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">float</span> num_dos[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>][<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">float</span> num_tres[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">int</span> v,<span class="keywordtype">int</span> r);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">void</span> <a class="code" href="metodosimplex_8h.html#afa3b17f70ba94e45f83e67a9e9929113">imprimir_tabla_simplex_dos</a>(<span class="keywordtype">float</span> num[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">float</span> num_dos[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>][<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">float</span> num_tres[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">int</span> v,<span class="keywordtype">int</span> r,<span class="keywordtype">float</span> z2);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">int</span> <a class="code" href="metodosimplex_8h.html#a9fb9da8f7d5a02738a51a3c17cf5efd5">buscar_menor</a>(<span class="keywordtype">float</span> num[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">int</span> v);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">int</span> <a class="code" href="metodosimplex_8h.html#a9aafea31a2bef02b685ee4669f9b5ce3">buscar_posicion</a>(<span class="keywordtype">float</span> num[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">int</span> v);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keywordtype">int</span> <a class="code" href="metodosimplex_8h.html#a5294fe22ed58d5ccc8ff297cb00f9a03">buscar_menor2</a>(<span class="keywordtype">float</span> num[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">int</span> v);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keywordtype">int</span> <a class="code" href="metodosimplex_8h.html#a47cf591c7560b00794b766c1ab4792bc">buscar_posicion2</a>(<span class="keywordtype">float</span> num[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">int</span> v);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keywordtype">void</span> <a class="code" href="metodosimplex_8h.html#aee02ee7ef3de984e8969ac3bd01aec5a">columna_pivote</a>(<span class="keywordtype">float</span> num[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>][<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>], <span class="keywordtype">int</span> r,<span class="keywordtype">int</span> aux);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keywordtype">void</span> <a class="code" href="metodosimplex_8h.html#a86749b69d98f8bbad35e8d9380043690">fila_pivote</a>(<span class="keywordtype">float</span> num[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>][<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">float</span> num_dos[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">float</span> rcons[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">int</span> r,<span class="keywordtype">int</span> aux);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keywordtype">void</span> <a class="code" href="metodosimplex_8h.html#abe851dbcedc285b4775a8094d8f7b6b9">elemento_pivote</a>(<span class="keywordtype">float</span> num[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>][<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">int</span> aux2,<span class="keywordtype">int</span> aux);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="keywordtype">void</span> <a class="code" href="metodosimplex_8h.html#aae887cf36fa5f8ebce6f4bff9fd40037">nueva_fila_pivote</a>(<span class="keywordtype">float</span> nfp[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>][<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">float</span> nfp2[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">float</span> num[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>][<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">float</span> num_dos[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">int</span> aux2,<span class="keywordtype">int</span> aux,<span class="keywordtype">int</span> v);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="keywordtype">void</span> <a class="code" href="metodosimplex_8h.html#a344dc6ca851db4e7d86f8f11e302766f">obtener_nueva_tabla</a>(<span class="keywordtype">float</span> funcion[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">float</span> restriccion[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>][<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">float</span> constante[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">float</span> menor,<span class="keywordtype">float</span> nfp[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>][<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">float</span> nfp2[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">int</span> v,<span class="keywordtype">int</span> r,<span class="keywordtype">int</span> aux2,<span class="keywordtype">int</span> aux);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="keywordtype">int</span> <a class="code" href="metodosimplex_8h.html#a80500b8cab70a91c8f0e80c8ce70c84f">obtener_resultado_z</a>(<span class="keywordtype">float</span> z2,<span class="keywordtype">float</span> num[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>],<span class="keywordtype">float</span> menor,<span class="keywordtype">int</span> aux2);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="keywordtype">void</span> <a class="code" href="metodosimplex_8h.html#ad629e4f2f2f095509540bf7f5f91f287">graficaMaximizar</a>(<span class="keywordtype">float</span> num[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>][<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>], <span class="keywordtype">float</span> num2[<a class="code" href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>], <span class="keywordtype">int</span> r, <span class="keywordtype">int</span> v);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="ametodosimplex_8h_html_a77290111e2efaa6bb260b0867aac479c"><div class="ttname"><a href="metodosimplex_8h.html#a77290111e2efaa6bb260b0867aac479c">imprimir_tabla_simplex_uno</a></div><div class="ttdeci">void imprimir_tabla_simplex_uno(float num[LIM], float num_dos[LIM][LIM], float num_tres[LIM], int v, int r)</div><div class="ttdoc">Muestra la tabla del metodo simplex con los datos agregados por el usuario.</div><div class="ttdef"><b>Definition:</b> <a href="_metodo_simplex_8c_source.html#l00013">MetodoSimplex.c:13</a></div></div>
+<div class="ttc" id="ametodosimplex_8h_html_a9aafea31a2bef02b685ee4669f9b5ce3"><div class="ttname"><a href="metodosimplex_8h.html#a9aafea31a2bef02b685ee4669f9b5ce3">buscar_posicion</a></div><div class="ttdeci">int buscar_posicion(float num[LIM], int v)</div><div class="ttdoc">Busca la posición menor dentro de un arreglo.</div><div class="ttdef"><b>Definition:</b> <a href="_metodo_simplex_8c_source.html#l00053">MetodoSimplex.c:53</a></div></div>
+<div class="ttc" id="ametodosimplex_8h_html_a5294fe22ed58d5ccc8ff297cb00f9a03"><div class="ttname"><a href="metodosimplex_8h.html#a5294fe22ed58d5ccc8ff297cb00f9a03">buscar_menor2</a></div><div class="ttdeci">int buscar_menor2(float num[LIM], int v)</div><div class="ttdoc">Busca el valor menor dentro de un arreglo, con la diferencia que este indique el lado contrario del f...</div><div class="ttdef"><b>Definition:</b> <a href="_metodo_simplex_8c_source.html#l00066">MetodoSimplex.c:66</a></div></div>
+<div class="ttc" id="ametodosimplex_8h_html_a47cf591c7560b00794b766c1ab4792bc"><div class="ttname"><a href="metodosimplex_8h.html#a47cf591c7560b00794b766c1ab4792bc">buscar_posicion2</a></div><div class="ttdeci">int buscar_posicion2(float num[LIM], int v)</div><div class="ttdoc">Busca la posición menor dentro de un arreglo.</div><div class="ttdef"><b>Definition:</b> <a href="_metodo_simplex_8c_source.html#l00077">MetodoSimplex.c:77</a></div></div>
+<div class="ttc" id="ametodosimplex_8h_html_a80500b8cab70a91c8f0e80c8ce70c84f"><div class="ttname"><a href="metodosimplex_8h.html#a80500b8cab70a91c8f0e80c8ce70c84f">obtener_resultado_z</a></div><div class="ttdeci">int obtener_resultado_z(float z2, float num[LIM], float menor, int aux2)</div><div class="ttdoc">Obtiene el valo de la constante de z.</div><div class="ttdef"><b>Definition:</b> <a href="_metodo_simplex_8c_source.html#l00148">MetodoSimplex.c:148</a></div></div>
+<div class="ttc" id="ametodosimplex_8h_html_afa3b17f70ba94e45f83e67a9e9929113"><div class="ttname"><a href="metodosimplex_8h.html#afa3b17f70ba94e45f83e67a9e9929113">imprimir_tabla_simplex_dos</a></div><div class="ttdeci">void imprimir_tabla_simplex_dos(float num[LIM], float num_dos[LIM][LIM], float num_tres[LIM], int v, int r, float z2)</div><div class="ttdoc">Muestra la tabla del metodo simplex una vez hecha las formulas.</div><div class="ttdef"><b>Definition:</b> <a href="_metodo_simplex_8c_source.html#l00028">MetodoSimplex.c:28</a></div></div>
+<div class="ttc" id="ametodosimplex_8h_html_abe851dbcedc285b4775a8094d8f7b6b9"><div class="ttname"><a href="metodosimplex_8h.html#abe851dbcedc285b4775a8094d8f7b6b9">elemento_pivote</a></div><div class="ttdeci">void elemento_pivote(float num[LIM][LIM], int aux2, int aux)</div><div class="ttdoc">Muestra el elemento pivote con respecto a la tabla.</div><div class="ttdef"><b>Definition:</b> <a href="_metodo_simplex_8c_source.html#l00106">MetodoSimplex.c:106</a></div></div>
+<div class="ttc" id="ametodosimplex_8h_html_a344dc6ca851db4e7d86f8f11e302766f"><div class="ttname"><a href="metodosimplex_8h.html#a344dc6ca851db4e7d86f8f11e302766f">obtener_nueva_tabla</a></div><div class="ttdeci">void obtener_nueva_tabla(float funcion[LIM], float restriccion[LIM][LIM], float constante[LIM], float menor, float nfp[LIM][LIM], float nfp2[LIM], int v, int r, int aux2, int aux)</div><div class="ttdoc">Elabora la tabla del metodo simplex una vez hecha las formulas.</div><div class="ttdef"><b>Definition:</b> <a href="_metodo_simplex_8c_source.html#l00122">MetodoSimplex.c:122</a></div></div>
+<div class="ttc" id="ametodosimplex_8h_html_aae887cf36fa5f8ebce6f4bff9fd40037"><div class="ttname"><a href="metodosimplex_8h.html#aae887cf36fa5f8ebce6f4bff9fd40037">nueva_fila_pivote</a></div><div class="ttdeci">void nueva_fila_pivote(float nfp[LIM][LIM], float nfp2[LIM], float num[LIM][LIM], float num_dos[LIM], int aux2, int aux, int v)</div><div class="ttdoc">Muestra el elemento pivote con respecto a la tabla.</div><div class="ttdef"><b>Definition:</b> <a href="_metodo_simplex_8c_source.html#l00111">MetodoSimplex.c:111</a></div></div>
+<div class="ttc" id="ametodosimplex_8h_html_a9fb9da8f7d5a02738a51a3c17cf5efd5"><div class="ttname"><a href="metodosimplex_8h.html#a9fb9da8f7d5a02738a51a3c17cf5efd5">buscar_menor</a></div><div class="ttdeci">int buscar_menor(float num[LIM], int v)</div><div class="ttdoc">Busca el valor menor dentro de un arreglo.</div><div class="ttdef"><b>Definition:</b> <a href="_metodo_simplex_8c_source.html#l00042">MetodoSimplex.c:42</a></div></div>
+<div class="ttc" id="ametodosimplex_8h_html_aee02ee7ef3de984e8969ac3bd01aec5a"><div class="ttname"><a href="metodosimplex_8h.html#aee02ee7ef3de984e8969ac3bd01aec5a">columna_pivote</a></div><div class="ttdeci">void columna_pivote(float num[LIM][LIM], int r, int aux)</div><div class="ttdoc">Imprime la columna pivote del método simplex.</div><div class="ttdef"><b>Definition:</b> <a href="_metodo_simplex_8c_source.html#l00089">MetodoSimplex.c:89</a></div></div>
+<div class="ttc" id="ametodosimplex_8h_html_a86749b69d98f8bbad35e8d9380043690"><div class="ttname"><a href="metodosimplex_8h.html#a86749b69d98f8bbad35e8d9380043690">fila_pivote</a></div><div class="ttdeci">void fila_pivote(float num[LIM][LIM], float num_dos[LIM], float rcons[LIM], int r, int aux)</div><div class="ttdoc">Imprime la fila pivote del método simplex.</div><div class="ttdef"><b>Definition:</b> <a href="_metodo_simplex_8c_source.html#l00097">MetodoSimplex.c:97</a></div></div>
+<div class="ttc" id="ametodosimplex_8h_html_ad629e4f2f2f095509540bf7f5f91f287"><div class="ttname"><a href="metodosimplex_8h.html#ad629e4f2f2f095509540bf7f5f91f287">graficaMaximizar</a></div><div class="ttdeci">void graficaMaximizar(float num[LIM][LIM], float num2[LIM], int r, int v)</div><div class="ttdoc">Gráfica el método del la tabla con Gnuplot.</div><div class="ttdef"><b>Definition:</b> <a href="_metodo_simplex_8c_source.html#l00158">MetodoSimplex.c:158</a></div></div>
+<div class="ttc" id="ametodosimplex_8h_html_ac3ddfb9af20a2dc934b0540be75f1241"><div class="ttname"><a href="metodosimplex_8h.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a></div><div class="ttdeci">#define LIM</div><div class="ttdef"><b>Definition:</b> <a href="metodosimplex_8h_source.html#l00016">metodosimplex.h:16</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Fichero principal." alt="" coords="5,309,56,336"/>
+<area shape="rect" id="node2" href="$_metodo_simplex_8c.html#a9fb9da8f7d5a02738a51a3c17cf5efd5" title="Busca el valor menor dentro de un arreglo." alt="" coords="143,5,247,32"/>
+<area shape="rect" id="node3" href="$_metodo_simplex_8c.html#a5294fe22ed58d5ccc8ff297cb00f9a03" title="Busca el valor menor dentro de un arreglo, con la diferencia que este indique el lado contrario del f..." alt="" coords="140,56,251,83"/>
+<area shape="rect" id="node4" href="$_metodo_simplex_8c.html#a9aafea31a2bef02b685ee4669f9b5ce3" title="Busca la posición menor dentro de un arreglo." alt="" coords="137,107,253,133"/>
+<area shape="rect" id="node5" href="$_metodo_simplex_8c.html#a47cf591c7560b00794b766c1ab4792bc" title="Busca la posición menor dentro de un arreglo." alt="" coords="134,157,257,184"/>
+<area shape="rect" id="node6" href="$_metodo_simplex_8c.html#aee02ee7ef3de984e8969ac3bd01aec5a" title="Imprime la columna pivote del método simplex." alt="" coords="140,208,251,235"/>
+<area shape="rect" id="node7" href="$_metodo_simplex_8c.html#abe851dbcedc285b4775a8094d8f7b6b9" title="Muestra el elemento pivote con respecto a la tabla." alt="" coords="138,259,253,285"/>
+<area shape="rect" id="node8" href="$_metodo_simplex_8c.html#a86749b69d98f8bbad35e8d9380043690" title="Imprime la fila pivote del método simplex." alt="" coords="156,309,235,336"/>
+<area shape="rect" id="node9" href="$_metodo_simplex_8c.html#ad629e4f2f2f095509540bf7f5f91f287" title="Gráfica el método del la tabla con Gnuplot." alt="" coords="135,360,255,387"/>
+<area shape="rect" id="node15" href="$_metodo_simplex_8c.html#afa3b17f70ba94e45f83e67a9e9929113" title="Muestra la tabla del metodo simplex una vez hecha las formulas." alt="" coords="104,411,287,437"/>
+<area shape="rect" id="node16" href="$_metodo_simplex_8c.html#a77290111e2efaa6bb260b0867aac479c" title="Muestra la tabla del metodo simplex con los datos agregados por el usuario." alt="" coords="104,461,287,488"/>
+<area shape="rect" id="node17" href="$_metodo_simplex_8c.html#aae887cf36fa5f8ebce6f4bff9fd40037" title="Muestra el elemento pivote con respecto a la tabla." alt="" coords="136,512,255,539"/>
+<area shape="rect" id="node18" href="$_metodo_simplex_8c.html#a344dc6ca851db4e7d86f8f11e302766f" title="Elabora la tabla del metodo simplex una vez hecha las formulas." alt="" coords="125,563,265,589"/>
+<area shape="rect" id="node19" href="$_metodo_simplex_8c.html#a80500b8cab70a91c8f0e80c8ce70c84f" title="Obtiene el valo de la constante de z." alt="" coords="126,613,265,640"/>
+<area shape="rect" id="node10" href="$gnuplot__i_8c.html#a416bd48453ce016d6419f0f39fa5c625" title="Closes a gnuplot session previously opened by gnuplot_init()" alt="" coords="349,259,451,285"/>
+<area shape="rect" id="node11" href="$gnuplot__i_8c.html#a8c71c6b7a0d957fa9280bf4b984bf43a" title="Sends a command to an active gnuplot session." alt="" coords="524,348,620,375"/>
+<area shape="rect" id="node12" href="$gnuplot__i_8c.html#af38602f2bf3bf427b4c6af1e3cc6f371" title="Opens up a gnuplot session, ready to receive commands." alt="" coords="356,411,444,437"/>
+<area shape="rect" id="node13" href="$gnuplot__i_8c.html#a6e5c073fc8478c3ea121f308254b683a" title="Change the plotting style of a gnuplot session." alt="" coords="513,424,631,451"/>
+<area shape="rect" id="node14" href="$gnuplot__i_8c.html#a0622d593434823fccadcc4415db5fe2d" title="Plot a slope on a gnuplot session." alt="" coords="335,360,465,387"/>
+</map>
